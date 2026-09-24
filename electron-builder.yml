@@ -1,0 +1,25 @@
+appId: com.clubcrumbs.desktop
+productName: Club Crumbs
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**
+  - src/offline.html
+  - package.json
+protocols:
+  - name: Club Crumbs
+    schemes: [clubcrumbs]
+win:
+  target: nsis
+  icon: build/icon.png
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  artifactName: Club-Crumbs-Setup-${version}.${ext}
+publish:
+  provider: github
+  owner: VidwathN-Karanth
+  repo: Club-Crumbs-DesktopApp
